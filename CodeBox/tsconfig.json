@@ -1,0 +1,23 @@
+{
+  "extends": "expo/tsconfig.base",  // Correct path for Expo's TypeScript base config
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",  // Added baseUrl for better path resolution
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",  // Added exclusion of node_modules to avoid conflicts
+    "dist",  // Optional: Exclude build output folder if you have one
+    "expo-env.d.ts"
+  ]
+}
